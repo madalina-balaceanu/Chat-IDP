@@ -18,6 +18,11 @@ public class MenuActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Intent intent = getIntent();
+        final String jsondata = intent.getStringExtra("jsondata");
+
+
+
         Button groupsList = (Button)findViewById(R.id.groupList);
         groupsList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -42,6 +47,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 Intent myIntent = new Intent(MenuActivity.this, FriendsListActivity.class);
+                myIntent.putExtra("jsondata", jsondata);
                 MenuActivity.this.startActivity(myIntent);
             }
         });

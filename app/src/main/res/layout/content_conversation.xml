@@ -23,7 +23,8 @@
         android:id="@+id/textToSend"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:layout_below="@id/convList"
+        android:inputType="text"
         android:layout_alignBottom="@+id/btnSend"
         android:layout_toLeftOf="@+id/btnSend"
         android:layout_toStartOf="@+id/btnSend" />
@@ -31,6 +32,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/convList"
         android:text="Send "
         android:id="@+id/btnSend"
         android:layout_alignParentBottom="true"
